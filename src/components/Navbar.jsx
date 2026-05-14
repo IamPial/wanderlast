@@ -5,7 +5,7 @@ import { LuUserRound } from "react-icons/lu";
 
 const Navbar = () => {
   return (
-    <div className="  sticky top-0 z-40 border-b border-separator bg-background/70 backdrop-blur-lg">
+    <div className="sticky top-0 z-40 border-b border-separator bg-background/70 backdrop-blur-lg">
       <nav className=" container mx-auto">
         <header className="flex my-4 items-center justify-between ">
           <ul className="flex items-center gap-4 font-semibold text-slate-800">
