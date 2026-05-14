@@ -5,6 +5,7 @@ import Link from "next/link";
 import { LuUserRound } from "react-icons/lu";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,16 +49,16 @@ const Navbar = () => {
           <div className="grid items-center w-full grid-cols-3 ">
             <ul className="hidden items-center gap-4 lg:w-3xl lg:flex font-semibold text-slate-800">
               <li>
-                <Link href="/">Home</Link>
+                <NavLink href="/">Home</NavLink>
               </li>
               <li>
-                <Link href="/destinations">Destinations</Link>
+                <NavLink href="/destinations">Destinations</NavLink>
               </li>
               <li>
-                <Link href="/my-bookings">My Bookings</Link>
+                <NavLink href="/my-bookings">My Bookings</NavLink>
               </li>
               <li>
-                <Link href="/add-destination">Add Destination</Link>
+                <NavLink href="/add-destination">Add Destination</NavLink>
               </li>
             </ul>
             <div className="flex items-center gap-3">
@@ -71,15 +72,17 @@ const Navbar = () => {
             </div>
             <ul className="hidden items-center gap-4 lg:flex font-semibold text-slate-800 justify-end">
               <li>
-                <Link href={"/profile"} className="flex gap-1 items-center">
-                  <LuUserRound /> Profile
-                </Link>
+                <NavLink href={"/profile"}>
+                  <p className="flex gap-1 items-center">
+                    <LuUserRound /> Profile
+                  </p>
+                </NavLink>
               </li>
               <li>
-                <Link href={"/login"}>Login</Link>
+                <NavLink href={"/login"}>Login</NavLink>
               </li>
               <li>
-                <Link href={"/sign-up"}>SignUp</Link>
+                <NavLink href={"/sign-up"}>SignUp</NavLink>
               </li>
             </ul>
           </div>
@@ -88,33 +91,35 @@ const Navbar = () => {
           <div className="border-t border-separator lg:hidden">
             <ul className="flex flex-col gap-2 p-4">
               <li>
-                <Link href="/" className="block py-2">
+                <NavLink href="/" className="block py-2">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/destinations" className="block py-2">
+                <NavLink href="/destinations" className="block py-2">
                   Destinations
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/my-bookings" className="block py-2">
+                <NavLink href="/my-bookings" className="block py-2">
                   My Bookings
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/add-destination" className="block py-2">
+                <NavLink href="/add-destination" className="block py-2">
                   Add Destination
-                </Link>
+                </NavLink>
               </li>
               <li className="mt-4 flex flex-col gap-2 border-t border-separator pt-4">
-                <Link href={"/profile"} className="flex gap-1 items-center">
-                  <LuUserRound /> Profile
-                </Link>
+                <NavLink href={"/profile"}>
+                  <p className="flex gap-1 items-center">
+                    <LuUserRound /> Profile
+                  </p>
+                </NavLink>
 
-                <Link href={"/login"}>Login</Link>
+                <NavLink href={"/login"}>Login</NavLink>
 
-                <Link href={"/sign-up"}>SignUp</Link>
+                <NavLink href={"/sign-up"}>SignUp</NavLink>
               </li>
             </ul>
           </div>
