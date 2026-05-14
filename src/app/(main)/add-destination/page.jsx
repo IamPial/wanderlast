@@ -31,11 +31,11 @@ const AddDestinationPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-5 pt-8 space-y-5">
-      <h2 className="text-5xl">Add New Travel Package</h2>
+    <div className="max-w-7xl mx-auto p-5 pt-8 ">
+      <h2 className="text-4xl md:text-5xl mb-15">Add New Travel Package</h2>
       <form
         onSubmit={handleSubmit}
-        className="p-10 rounded-lg space-y-8 w-3xl border border-gray-200 shadow-xs"
+        className="p-10 mx-auto rounded-lg space-y-8 w-full lg:w-3xl border border-gray-200 shadow-xs"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Destination Name */}
