@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative text-white  flex justify-between flex-col items-center  gap-5 h-150">
+    <div className="relative text-white  flex justify-between flex-col items-center  gap-5 h-150 mb-10">
       <Image src={BannerImg} alt="Banner" fill className="object-cover" />
       <div className="relative z-10 p-10 text-center flex justify-center flex-col items-center gap-3.5 flex-1">
         <h1 className="text-7xl">
@@ -27,7 +27,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className=" bg-white/30 flex justify-between gap-5 w-full items-center">
+      <div className=" relative z-30 bg-white/30 hidden md:flex justify-between gap-5 w-full items-center">
         <div className="px-3">
           <h3 className="text-sm">Location</h3>
           <p className="text-xs">Address, City or Zip</p>
