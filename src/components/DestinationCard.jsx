@@ -4,9 +4,10 @@ import { BsCalendar2Date } from "react-icons/bs";
 
 import { LuMapPin } from "react-icons/lu";
 import { MdArrowOutward } from "react-icons/md";
+import Link from "next/link";
 
 const DestinationCard = ({ destination }) => {
-  const { destinationName, country, category, duration, imageUrl, price } =
+  const { _id, destinationName, country, duration, imageUrl, price } =
     destination;
   return (
     <div className="">
@@ -33,11 +34,12 @@ const DestinationCard = ({ destination }) => {
           <BsCalendar2Date className="text-gray-600" /> {duration}
         </p>
       </div>
-      <div>
+      <div></div>
+      <Link href={`/destinations/${_id}`}>
         <Button className="bg-white text-sky-500 px-0 uppercase underline">
           Book Now <MdArrowOutward />
         </Button>
-      </div>
+      </Link>
     </div>
   );
 };
