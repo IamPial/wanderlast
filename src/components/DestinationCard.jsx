@@ -34,7 +34,6 @@ const DestinationCard = ({ destination }) => {
           <BsCalendar2Date className="text-gray-600" /> {duration}
         </p>
       </div>
-      <div></div>
       <Link href={`/destinations/${_id}`}>
         <Button className="bg-white text-sky-500 px-0 uppercase underline">
           Book Now <MdArrowOutward />
