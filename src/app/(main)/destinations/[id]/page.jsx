@@ -6,16 +6,8 @@ import { LuMapPin } from "react-icons/lu";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 import { format } from "date-fns";
-
-// category: "Mountain";
-// country: "Newzeland";
-// departureDate: "2026-10-08";
-// description: "The sea is one of Earth's most breathtaking and powerful forces of nature. Stretching endlessly to the horizon, its surface shifts constantly — now a calm, glassy mirror reflecting the sky, now a churning mass of white-capped waves rolling in rhythmic succession toward the shore.The ocean's color changes with the light and depth — deep sapphire blue in open waters, turquoise and emerald near shallow coasts, and silver-grey beneath stormy skies. Sunlight dances across the surface in thousands of glittering fragments, while beneath the waves, a whole silent world moves in filtered blue light.The ShoreWhere the sea meets the land, waves break with a thunderous crash, dissolving into white foam that hisses and retreats over wet sand or smooth pebbles. The air here is thick with salt, cool and fresh, filling the lungs with every breath.At sunrise and sunset, the sea becomes a canvas — blazing oranges, deep purples, and warm golds reflected perfectly on the water's surface. The horizon is infinite, where sky and sea blur into one seamless line.The sea is never silent. Waves rise, curl, and crash in a steady, ancient rhythm. Seagulls cry overhead. The wind hums across the water. Together they create a timeless soundtrack — calming, wild, and deeply alive.Beneath the surface, coral reefs burst with color, fish dart in silver schools, and sea plants sway gently with the current. Dolphins leap near the bow of boats, and whales breach in the open deep, reminding us how vast and alive the ocean truly is.";
-// destinationName: "Sea Nature";
-// duration: "7 Days / 6 Night";
-// imageUrl: "https://cdn.pixabay.com/photo/2021/12/15/20/21/sea-6873335_1280.jpg";
-// price: "1000";
-// _id: "6a059e934deac92ae81be11a";
+import { GoArrowLeft } from "react-icons/go";
+import { EditModal } from "@/components/EditModal";
 
 const DestinationDetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -32,7 +24,17 @@ const DestinationDetailsPage = async ({ params }) => {
   } = details;
 
   return (
-    <div className="container mx-auto px-2 md:px-0 pt-4">
+    <div className="container mx-auto px-2 md:px-0 pt-10">
+      <div className="pb-6 flex justify-between items-center">
+        <Link href="/destinations">
+          <Button className="  text-[16px] rounded-none bg-white text-gray-600">
+            <GoArrowLeft className="mb-2" />
+            Back to Destinations
+          </Button>
+        </Link>
+        <EditModal details={details} />
+      </div>
+
       <Image
         src={imageUrl}
         alt="Plane"
