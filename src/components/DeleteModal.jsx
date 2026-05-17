@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertDialog, Button } from "@heroui/react";
+import { redirect } from "next/navigation";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const DeleteModal = ({ details }) => {
@@ -14,7 +15,7 @@ const DeleteModal = ({ details }) => {
       },
     });
     const data = await res.json();
-    console.log(data);
+    redirect("/destinations");
   };
   return (
     <AlertDialog>
