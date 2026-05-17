@@ -8,6 +8,7 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { GoArrowLeft } from "react-icons/go";
 import { EditModal } from "@/components/EditModal";
+import DeleteModal from "@/components/DeleteModal";
 
 const DestinationDetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -32,7 +33,10 @@ const DestinationDetailsPage = async ({ params }) => {
             Back to Destinations
           </Button>
         </Link>
-        <EditModal details={details} />
+        <div className="flex gap-2">
+          <EditModal details={details} />
+          <DeleteModal details={details} />
+        </div>
       </div>
 
       <Image
